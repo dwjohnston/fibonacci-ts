@@ -8,6 +8,11 @@
  */
 export default function fibonacci (n: number) : number {
 
+
+    if (n < 0 || !Number.isInteger(n)) {
+        throw "Invalid index"; 
+    } 
+
     if (n <= 1) return 0; 
 
     function recursiveFibonacci(n1 : number, n2: number, countsLeft: number) : number {
